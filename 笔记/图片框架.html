@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="file:///Users/carrey/.vscode/extensions/yzhang.markdown-all-in-one-0.11.0/media/markdown.css">
+        <link rel="stylesheet" type="text/css" href="file:///Users/carrey/.vscode/extensions/yzhang.markdown-all-in-one-0.11.0/media/tomorrow.css">
+        <link rel="stylesheet" type="text/css" href="file:///Users/carrey/.vscode/extensions/yzhang.markdown-all-in-one-0.11.0/media/checkbox.css">
+        
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'HelveticaNeue-Light', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 id="">图片加载注意事项</h2>
+<hr>
+<pre><code>imageLoadUtil 
+
+    |- imageLoader
+        |- ImageLoaderConfig
+            |- Resource 资源文件
+            |- Executor(task,taskForCache)任务，缓存任务
+            |- MemoryCache 内存
+            |- DiskCache 硬盘缓存
+            |- ImageDownloader(downloader,networkDeniedDownloader,slowNetworkDownloader)几种下载方式
+            |- DisplayImageOptions 显示选项
+        |- ImageLoaderEngine
+            |-config.task
+        |- ImageLoaderLinstener
+            |- start
+            |- failed
+            |- comolete
+            |- cancel
+    |- imageOptions
+    ...
+
+</code></pre>
+<p>ImageLoader 之类的加载utils基本上都是 一个静态的全局对象 instance。一个加载引擎 ImageLoader 和一系列的加载方法。
+loadxxx()... 通过不同的imageOptions，加载不同的图片。
+加载引擎里面通过配置，做一些三级缓存，预加载图片等。</p>
+<pre><code class="language-flows"> st=>start: Start
+e=>end
+op=>operation: My Operation
+cond=>condition: Yes or No?
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+
+</code></pre>
+<pre><code class="language-flows">st=>start:Start
+
+
+</code></pre>
+
+    </body>
+    </html>
